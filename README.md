@@ -1,5 +1,5 @@
 # Simon Game
-Simon Game implemented wit Javascript, jQuery, Web Audio API
+Simon Game implemented with Javascript, jQuery, Web Audio API
 
 ![alt text](https://i.imgur.com/yIrDbbk.png)
 
