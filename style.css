@@ -1,0 +1,172 @@
+body {
+    background: linear-gradient(35deg, #060606 49.9%, #131313 50%) fixed;
+    background-size: cover;
+    margin: 0;
+    height: 100%;
+    color: white;
+    overflow-x: hidden;
+}
+
+html {
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.simon-game {
+    width: 410px;
+    min-width: 410px;
+    text-align: center;
+    user-select: none;
+}
+
+.svg-spin {
+    animation: spin 1.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+svg .t-yellow {
+    fill: #ffeb3b;
+}
+svg .t-blue {
+    fill: #3489dd;
+}
+svg .t-green {
+    fill: #36bf53;
+}
+svg .t-red {
+    fill: #f63b06;
+}
+
+/* Gradients */
+
+.tg-yellow {
+    fill: url(#yellowGradient) !important;
+}
+.tg-blue {
+    fill: url(#blueGradient) !important;
+}
+.tg-green {
+    fill: url(#greenGradient) !important;
+}
+.tg-red {
+    fill: url(#redGradient) !important;
+}
+
+.simon-name {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3.3rem;
+}
+
+.simon-afo {
+    display: block;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.v-top {
+    vertical-align: top;
+}
+
+.mb-1 {
+    margin-bottom: 10px;
+}
+
+.simon-settings {
+    text-transform: uppercase;
+
+    border-radius: 4px;
+    margin: -30px auto 10px auto;
+    padding: 10px;
+    font-family: 'Aldrich', sans-serif;
+    text-align: center;
+}
+
+.simon-start {
+    background: #f74505;
+    padding: 3px 8px;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    font-size: 1rem;
+}
+
+.simon-power {
+    background: #f74505;
+    padding: 3px 8px;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    font-size: 1rem;
+}
+
+.simon-display {
+    visibility: hidden;
+    height: 20px;
+    font-size: 0;
+    transition: font-size ease-out 0.3s;
+}
+
+.power-on {
+    visibility: visible;
+    font-size: 1.5rem;
+}
+
+.simon-toggle {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    vertical-align: middle;
+    width: 48px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #555858;
+    transition: background-color ease-out 0.25s;
+}
+
+.simon-toggle:before {
+    content: "on off";
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 13px;
+    height: 13px;
+    background: #fff;
+    left: 3px;
+    top: 3px;
+    border-radius: 50%;
+    font: 12px Helvetica;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-indent: -29px;
+    word-spacing: 24px;
+    color: #fff;
+    text-shadow: -1px -1px rgba(0,0,0,0.25);
+    white-space: nowrap;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+    transition: all cubic-bezier(0.2, 1.3, 0.5, 1) 0.25s;
+}
+
+.simon-toggle.strict:checked {
+    background-color: #f62406;
+}
+
+.simon-toggle.power:checked {
+    background-color: #1e74ca;
+}
+
+.simon-toggle:checked:before {
+    left: 32px;
+}
