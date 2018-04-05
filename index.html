@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="subject" content="Simon Game">
+
+        <title>Simon Game</title>
+        <link href="https://fonts.googleapis.com/css?family=Aldrich|Luckiest+Guy" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main id="main" class="container">
+            <div class="simon-game">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="simon-body">
+                    <defs>
+                        <radialGradient id="greenGradient">
+                            <stop offset="10%" stop-color="gold"/>
+                            <stop offset="95%" stop-color="green"/>
+                        </radialGradient>
+                        <radialGradient id="redGradient">
+                            <stop offset="10%" stop-color="gold"/>
+                            <stop offset="95%" stop-color="#f62406"/>
+                        </radialGradient>
+                        <radialGradient id="blueGradient">
+                            <stop offset="10%" stop-color="white"/>
+                            <stop offset="95%" stop-color="#197ada"/>
+                        </radialGradient>
+                        <radialGradient id="yellowGradient">
+                            <stop offset="10%" stop-color="white"/>
+                            <stop offset="95%" stop-color="#ffc107"/>
+                        </radialGradient>
+                    </defs>
+
+                    <g transform="translate(50,7.5) rotate(45)">
+                        <rect x="0" y="0" width="60" height="60" />
+                    </g>
+                    <g transform="translate(17.5,52.5)" id="t-yellow">
+                        <polygon points="0 0, 30 0, 30 30" class="t-yellow" />
+                    </g>
+                    <g transform="translate(52.5,17.5)" id="t-blue">
+                        <polygon points="0 0, 0 30, 30 30" class="t-blue" />
+                    </g>
+                    <g transform="translate(52.5,52.5)" id="t-green">
+                        <polygon  points="0 0, 30 0, 0 30" class="t-green tg-green" />
+                    </g>
+                    <g transform="translate(17.5,17.5)" id="t-red">
+                        <polygon points="30 0, 30 30, 0 30" class="t-red tg-red" />
+                    </g>
+                </svg>
+
+                <div class="simon-settings">
+                    <div class="mb-1 simon-display">00</div>
+                    <div> <span class="simon-start">Start</span> | <span>Power</span> <input type="checkbox" class="simon-toggle power"> | <span>Strict</span> <input type="checkbox" class="simon-toggle strict"></div>
+                </div>
+
+                <span class="v-top">◄</span> <span class="simon-name">Simon Game</span> ►
+                <span class="simon-afo">No Fast No Furious!</span>
+            </div>
+        </main>
+        <!-- Custom JavaScript & jQuery -->
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
